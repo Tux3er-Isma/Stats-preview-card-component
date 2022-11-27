@@ -1,5 +1,117 @@
+/*Variables*/
+/*Color Variables*/
+/*Font Variables*/
 /*SCSS Files*/
 /*Main Styles*/
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__card {
+  background-color: hsl(244deg, 38%, 16%);
+  display: inline-flex;
+  height: 370px;
+  border-radius: 10px;
+}
+.main .main__card .main__card__thumbnail-container {
+  background-color: hsl(277deg, 64%, 61%);
+  order: 2;
+  border-radius: 0px 10px 10px 0px;
+}
+.main .main__card .main__card__thumbnail-container .main__card__thumbnail-container__thumbnail {
+  mix-blend-mode: multiply;
+  width: 450px;
+}
+.main .main__card .main__card__thumbnail-mobile-container {
+  display: none;
+  border-radius: 10px 10px 0px 0px;
+  background-color: hsl(277deg, 64%, 61%);
+  height: 330px;
+}
+.main .main__card .main__card__thumbnail-mobile-container .main__card__thumbnail-mobile-container__thumbnail {
+  width: 440px;
+  height: 330px;
+  mix-blend-mode: multiply;
+}
+.main .main__card .main__card__text-container {
+  margin-top: 60px;
+}
+.main .main__card .main__card__text-container .main__card__text-container__title {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+.main .main__card .main__card__text-container .main__card__text-container__title .main__card__text-container__title__purple-text {
+  color: hsl(277deg, 64%, 61%);
+}
+.main .main__card .main__card__text-container .main__card__text-container__text {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  width: 400px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+}
+.main .main__card .main__card__text-container .main__card__text-container__people {
+  display: flex;
+  justify-content: space-around;
+}
+.main .main__card .main__card__text-container .main__card__text-container__people .main__card__text-container__people__companies {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+.main .main__card .main__card__text-container .main__card__text-container__people .main__card__text-container__people__companies .main__card__text-container__people__companies__name {
+  font-size: 12px;
+  font-weight: 100;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+.main .main__card .main__card__text-container .main__card__text-container__people .main__card__text-container__people__templates {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+.main .main__card .main__card__text-container .main__card__text-container__people .main__card__text-container__people__templates .main__card__text-container__people__templates__name {
+  font-size: 12px;
+  font-weight: 100;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+.main .main__card .main__card__text-container .main__card__text-container__people .main__card__text-container__people__queries {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+.main .main__card .main__card__text-container .main__card__text-container__people .main__card__text-container__people__queries .main__card__text-container__people__queries__name {
+  font-size: 12px;
+  font-weight: 100;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+
+/*Responsive Mobile Main Styles*/
+@media only screen and (max-width: 480px) {
+  .main .main__card {
+    flex-direction: column;
+    height: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .main .main__card .main__card__thumbnail-container {
+    display: none;
+  }
+  .main .main__card .main__card__thumbnail-mobile-container {
+    display: inline-block;
+  }
+}
 /*SCSS Files*/
 /*General Styles*/
 * {
@@ -10,6 +122,13 @@
 
 body {
   min-height: 100vh;
+  background-color: hsl(233deg, 47%, 7%);
+}
+
+.tux3er {
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

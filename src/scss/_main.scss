@@ -2,3 +2,136 @@
 @use 'variables';
 
 /*Main Styles*/
+.main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main__card{
+        background-color: variables.$card-bg;
+        display: inline-flex;
+        height: 370px;
+        border-radius: 10px;
+
+        .main__card__thumbnail-container{
+            background-color: variables.$accent;
+            order: 2;
+            border-radius: 0px 10px 10px 0px;
+
+            .main__card__thumbnail-container__thumbnail{
+                mix-blend-mode: multiply;
+                width: 450px;
+            }
+        }
+
+        .main__card__thumbnail-mobile-container{
+            display: none;
+            border-radius: 10px 10px 0px 0px;
+            background-color: variables.$accent;
+            height: 330px;
+
+            .main__card__thumbnail-mobile-container__thumbnail{
+                width: 440px;
+                height: 330px;
+                mix-blend-mode: multiply;
+            }
+        }
+
+        .main__card__text-container{
+            margin-top: 60px;
+
+            .main__card__text-container__title{
+                color: #fff;
+                font-family: variables.$inter;
+                margin-bottom: 20px;
+                margin-left: 40px;
+
+                .main__card__text-container__title__purple-text{
+                    color: variables.$accent;
+                }
+            }
+
+            .main__card__text-container__text{
+                color: variables.$main-paragraph-color;
+                font-family: variables.$inter;
+                font-weight: 100;
+                font-size: 15px;
+                width: 400px;
+                margin-bottom: 30px;
+                margin-left: 40px;
+            }
+
+            .main__card__text-container__people{
+                display: flex;
+                justify-content: space-around;
+
+                .main__card__text-container__people__companies{
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    font-family: variables.$inter;
+                    font-weight: bold;
+
+                    .main__card__text-container__people__companies__name{
+                        font-size: 12px;
+                        font-weight: 100;
+                        color: variables.$stat-heading-color;
+                    }
+                }
+
+                .main__card__text-container__people__templates{
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    font-family: variables.$inter;
+                    font-weight: bold;
+
+                    .main__card__text-container__people__templates__name{
+                        font-size: 12px;
+                        font-weight: 100;
+                        color: variables.$stat-heading-color;
+                    }
+                }
+
+                .main__card__text-container__people__queries{
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    font-family: variables.$inter;
+                    font-weight: bold;
+
+                    .main__card__text-container__people__queries__name{
+                        font-size: 12px;
+                        font-weight: 100;
+                        color: variables.$stat-heading-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Responsive Mobile Main Styles*/
+@media only screen and (max-width: 480px){
+    .main{
+
+        .main__card{
+            flex-direction: column;
+            height: 650px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            .main__card__thumbnail-container{
+                display: none;
+            }
+
+            .main__card__thumbnail-mobile-container{
+                display: inline-block;
+            }
+
+            .main__card__text-container{
+            }
+        }
+    }
+}

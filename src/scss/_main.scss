@@ -115,10 +115,11 @@
 /*Responsive Mobile Main Styles*/
 @media only screen and (max-width: 480px){
     .main{
+        margin-top: 40px;
 
         .main__card{
             flex-direction: column;
-            height: 650px;
+            height: 850px;
             margin-top: 20px;
             margin-bottom: 20px;
 
@@ -131,6 +132,33 @@
             }
 
             .main__card__text-container{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .main__card__text-container__title{
+                    text-align: center;
+                    margin: 0;
+                    margin-bottom: 20px;
+                    font-size: 40px;
+                }
+
+                .main__card__text-container__text{
+                    text-align: center;
+                    margin: 0;
+                    margin-bottom: 40px;
+                }
+
+                .main__card__text-container__people{
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    .main__card__text-container__people__templates{
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                }
             }
         }
     }

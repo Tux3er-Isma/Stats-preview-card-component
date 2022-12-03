@@ -12,10 +12,25 @@
 body{
     min-height: 100vh;
     background-color: variables.$bg-color;
+    overflow-y: hidden;
+
+    .tux3er{
+        color: #fff;
+        text-align: center;
+        position: relative;
+        bottom: 50px;
+        font-family: variables.$inter;
+    }
 }
 
-.tux3er{
-    color: #fff;
-    text-align: center;
-    font-family: variables.$inter;
+@media only screen and (max-width: 480px){
+    body{
+        overflow-y: scroll;
+        
+        .tux3er{
+            font-size: 17px;
+            top: 20px;
+            padding-bottom: 20px;
+        }
+    }
 }

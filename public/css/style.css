@@ -99,9 +99,12 @@
 
 /*Responsive Mobile Main Styles*/
 @media only screen and (max-width: 480px) {
+  .main {
+    margin-top: 40px;
+  }
   .main .main__card {
     flex-direction: column;
-    height: 650px;
+    height: 850px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -110,6 +113,31 @@
   }
   .main .main__card .main__card__thumbnail-mobile-container {
     display: inline-block;
+  }
+  .main .main__card .main__card__text-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main .main__card .main__card__text-container .main__card__text-container__title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  .main .main__card .main__card__text-container .main__card__text-container__text {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .main .main__card .main__card__text-container .main__card__text-container__people {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .main .main__card .main__card__text-container .main__card__text-container__people .main__card__text-container__people__templates {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 /*SCSS Files*/
@@ -123,12 +151,25 @@
 body {
   min-height: 100vh;
   background-color: hsl(233deg, 47%, 7%);
+  overflow-y: hidden;
 }
-
-.tux3er {
+body .tux3er {
   color: #fff;
   text-align: center;
+  position: relative;
+  bottom: 50px;
   font-family: "Inter", sans-serif;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    overflow-y: scroll;
+  }
+  body .tux3er {
+    font-size: 17px;
+    top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
